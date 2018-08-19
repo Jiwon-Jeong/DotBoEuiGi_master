@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1071109164691",
+    "firebase_url": "https://apply11streetapi.firebaseio.com",
+    "project_id": "apply11streetapi",
+    "storage_bucket": "apply11streetapi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1071109164691:android:15819a5376abe304",
+        "android_client_info": {
+          "package_name": "com.example.dowkk.apply11streetapi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1071109164691-da875cnivqkqapp1238o2tiegcpi894h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzwY5d_dSkauN8J7FcFz_vP2l_NcaYR3s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
