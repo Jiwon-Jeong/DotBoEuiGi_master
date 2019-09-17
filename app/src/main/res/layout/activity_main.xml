@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/participant_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/keyword_area">
+
+        <TextView
+            android:id="@+id/input_part_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="참가자성함 : "
+            app:layout_constraintEnd_toEndOf="@+id/input_part_edt"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/input_part_edt"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/input_part_txt"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/keyword_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/participant_area"
+        app:layout_constraintBottom_toTopOf="@+id/mystreet11_btn">
+
+        <TextView
+            android:id="@+id/input_keyword_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="검색어 :"
+            app:layout_constraintEnd_toEndOf="@+id/input_keyword_edt"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/input_keyword_edt"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/input_keyword_txt"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/mystreet11_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mystreet11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/keyword_area"
+        app:layout_constraintBottom_toTopOf="@+id/alt_btn"
+        android:onClick="startApp"/>
+
+    <Button
+        android:id="@+id/alt_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="myalt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mystreet11_btn"
+        app:layout_constraintBottom_toTopOf="@+id/ui_btn"
+        android:onClick="startApp"/>
+
+    <Button
+        android:id="@+id/ui_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="myui"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alt_btn"
+        app:layout_constraintBottom_toTopOf="@+id/focus_btn"
+        android:onClick="startApp"/>
+
+    <Button
+        android:id="@+id/focus_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="myfocus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ui_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="startApp"/>
+</android.support.constraint.ConstraintLayout>
+
