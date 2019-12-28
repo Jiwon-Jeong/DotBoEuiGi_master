@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80e4e4e4"
+    android:minHeight="300sp">
+
+
+    <Spinner
+        android:id="@+id/spn_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:padding="8sp"
+        android:contentDescription="@string/spn_option"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_option"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_margin="8sp"
+        app:layout_constraintTop_toBottomOf="@id/spn_option"
+        app:layout_constraintBottom_toTopOf="@id/txt_total_count"
+        android:scrollbars="vertical"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+    <TextView
+        android:id="@+id/txt_total_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:text="총 수량 1개"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_cart"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:text="총 금액"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_purchase"
+        app:layout_constraintEnd_toStartOf="@id/txt_total_price_value" />
+
+    <TextView
+        android:id="@+id/txt_total_price_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:text="3,500 원"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_purchase"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_cart"
+        android:layout_width="0sp"
+        android:layout_height="50sp"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white"
+        android:text="장바구니"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_purchase"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </Button>
+
+    <Button
+        android:id="@+id/btn_purchase"
+        android:layout_width="0sp"
+        android:layout_height="50sp"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimary"
+        android:text="구매하기"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/btn_cart">
+
+    </Button>
+
+
+</android.support.constraint.ConstraintLayout>

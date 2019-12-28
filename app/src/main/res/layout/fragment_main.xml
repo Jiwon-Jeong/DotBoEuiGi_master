@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <ViewFlipper
+            android:id="@+id/flipper"
+            android:layout_width="wrap_content"
+            android:layout_height="200sp"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/img_ad1"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                android:contentDescription="월간 11절 타임딜"
+                android:nextFocusRight="@id/img_ad2"
+                android:onClick="blockBtnClick"
+                android:src="@drawable/ad_1" />
+
+            <ImageView
+                android:id="@+id/img_ad2"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                android:contentDescription="월간 11절 십일절샵"
+                android:onClick="blockBtnClick"
+                android:src="@drawable/ad_2" />
+
+            <ImageView
+                android:id="@+id/img_ad3"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                android:contentDescription="월간 11절 버거킹"
+                android:onClick="blockBtnClick"
+                android:src="@drawable/ad_3" />
+
+        </ViewFlipper>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/flipper"
+            >
+
+            <ViewFlipper
+                android:id="@+id/flipper_keywords"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@id/list_lank"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                android:focusable="true"
+                >
+
+                <TextView
+                    android:id="@+id/txt_kwd1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="검색어 1위"
+                    android:padding="15sp"
+                    android:textSize="7pt"
+                    android:onClick="blockBtnClick"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_kwd2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="검색어 2위"
+                    android:padding="15sp"
+                    android:textSize="7pt"
+                    android:onClick="blockBtnClick"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_kwd3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="검색어 3위"
+                    android:padding="15sp"
+                    android:textSize="7pt"
+                    android:onClick="blockBtnClick"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_kwd4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="검색어 4위"
+                    android:padding="15sp"
+                    android:textSize="7pt"
+                    android:onClick="blockBtnClick"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_kwd5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="검색어 5위"
+                    android:padding="15sp"
+                    android:textSize="7pt"
+                    android:onClick="blockBtnClick"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_kwd6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="검색어 6위"
+                    android:paddingLeft="15sp"
+                    android:textSize="7pt"
+                    android:onClick="blockBtnClick"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_kwd7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="검색어 7위"
+                    android:paddingLeft="15sp"
+                    android:textSize="7pt"
+                    android:onClick="blockBtnClick"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_kwd8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="검색어 8위"
+                    android:paddingLeft="15sp"
+                    android:textSize="7pt"
+                    android:onClick="blockBtnClick"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_kwd9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="검색어 9위"
+                    android:paddingLeft="15sp"
+                    android:textSize="7pt"
+                    android:onClick="blockBtnClick"
+                    />
+                <TextView
+                    android:id="@+id/txt_kwd10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="검색어 10위"
+                    android:paddingLeft="15sp"
+                    android:onClick="blockBtnClick"
+                    android:textSize="7pt"
+                    />
+
+            </ViewFlipper>
+
+            <ExpandableListView
+                android:id="@+id/list_lank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:groupIndicator="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/flipper_keywords"
+                android:layout_marginBottom="10sp"
+                >
+            </ExpandableListView>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_grid1"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="쿠폰"
+        android:scaleType="fitXY"
+        android:onClick="blockBtnClick"
+        app:layout_constraintEnd_toStartOf="@+id/btn_grid2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/btn_grid1" />
+
+    <ImageButton
+        android:id="@+id/btn_grid2"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="출석체크"
+        android:scaleType="fitXY"
+        android:onClick="blockBtnClick"
+        app:layout_constraintEnd_toStartOf="@+id/btn_grid3"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/btn_grid1"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/btn_grid2" />
+
+    <ImageButton
+        android:id="@+id/btn_grid3"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="e쿠폰"
+        android:scaleType="fitXY"
+        android:onClick="blockBtnClick"
+        app:layout_constraintEnd_toStartOf="@+id/btn_grid4"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/btn_grid2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/btn_grid3" />
+
+    <ImageButton
+        android:id="@+id/btn_grid4"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="여행 항공"
+        android:scaleType="fitXY"
+        android:onClick="blockBtnClick"
+        app:layout_constraintEnd_toStartOf="@+id/btn_grid5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/btn_grid3"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/btn_grid4" />
+
+    <ImageButton
+        android:id="@+id/btn_grid5"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="휴대폰샵"
+        android:scaleType="fitXY"
+        android:onClick="blockBtnClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/btn_grid4"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/btn_grid5" />
+
+    <ImageButton
+        android:id="@+id/btn_grid6"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="당일배송"
+        android:scaleType="fitXY"
+        android:onClick="blockBtnClick"
+        app:layout_constraintEnd_toStartOf="@+id/btn_grid7"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_grid1"
+        app:srcCompat="@drawable/btn_grid6" />
+
+    <ImageButton
+        android:id="@+id/btn_grid7"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="롯데"
+        android:scaleType="fitXY"
+        android:onClick="blockBtnClick"
+        app:layout_constraintEnd_toStartOf="@+id/btn_grid8"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/btn_grid6"
+        app:layout_constraintTop_toBottomOf="@+id/btn_grid2"
+        app:srcCompat="@drawable/btn_grid7" />
+
+    <ImageButton
+        android:id="@+id/btn_grid8"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="현대"
+        android:scaleType="fitXY"
+        android:onClick="blockBtnClick"
+        app:layout_constraintEnd_toStartOf="@+id/btn_grid9"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/btn_grid7"
+        app:layout_constraintTop_toBottomOf="@+id/btn_grid3"
+        app:srcCompat="@drawable/btn_grid8" />
+
+    <ImageButton
+        android:id="@+id/btn_grid9"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="GS SHOP"
+        android:scaleType="fitXY"
+        android:onClick="blockBtnClick"
+        app:layout_constraintEnd_toStartOf="@+id/btn_grid10"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/btn_grid8"
+        app:layout_constraintTop_toBottomOf="@+id/btn_grid4"
+        app:srcCompat="@drawable/btn_grid9" />
+
+    <ImageButton
+        android:id="@+id/btn_grid10"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="전체보기"
+        android:scaleType="fitXY"
+        android:onClick="blockBtnClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/btn_grid9"
+        app:layout_constraintTop_toBottomOf="@+id/btn_grid5"
+        app:srcCompat="@drawable/btn_grid10" />
+
+    <ImageButton
+        android:id="@+id/btn_banner"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="월간십일절"
+        android:scaleType="fitXY"
+        android:onClick="blockBtnClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_grid8"
+        app:srcCompat="@drawable/ad_bottom" />
+
+
+</android.support.constraint.ConstraintLayout>
+
