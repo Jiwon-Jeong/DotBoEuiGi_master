@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350sp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    android:padding="5sp"
+    android:layout_gravity="center">
+
+    <com.example.dowkk.myui.MeasuredViewPager
+        android:id="@+id/pupup_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+    </com.example.dowkk.myui.MeasuredViewPager>
+
+    <ImageButton
+        android:id="@+id/btn_close"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:src="@drawable/ic_action_close"
+        android:contentDescription="@string/btn_close"
+        android:background="#10000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:src="@drawable/ic_action_back"
+        android:contentDescription="@string/btn_back"
+        android:background="#10000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/btn_next"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:src="@drawable/ic_action_next"
+        android:contentDescription="@string/btn_next"
+        android:background="#10000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

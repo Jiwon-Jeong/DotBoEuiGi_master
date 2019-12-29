@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/parentLayout">
+
+    <LinearLayout
+        android:id = "@+id/relativeLayout1"
+        android:layout_width = "fill_parent"
+        android:layout_height = "wrap_content">
+
+        <TextView
+            android:id = "@+id/column1"
+            android:layout_width = "0sp"
+            android:layout_height = "match_parent"
+            android:layout_weight = "1"
+            android:background = "@drawable/cell_shape"
+            android:ellipsize = "end"
+            android:padding = "5sp"
+            android:singleLine = "true"
+            android:visibility="gone"
+            android:focusable="true"/>
+
+        <TextView
+            android:id = "@+id/column2"
+            android:layout_width = "0sp"
+            android:layout_height = "match_parent"
+            android:layout_weight = "1"
+            android:background = "@drawable/cell_shape"
+            android:ellipsize = "end"
+            android:padding = "5sp"
+            android:singleLine = "true"
+            android:visibility="gone"
+            android:focusable="true"/>
+
+        <TextView
+            android:id = "@+id/column3"
+            android:layout_width = "0sp"
+            android:layout_height = "match_parent"
+            android:layout_weight = "1"
+            android:background = "@drawable/cell_shape"
+            android:ellipsize = "end"
+            android:padding = "5sp"
+            android:singleLine = "true"
+            android:visibility="gone"
+            android:focusable="true"/>
+
+        <TextView
+            android:id = "@+id/column4"
+            android:layout_width = "0sp"
+            android:layout_height = "match_parent"
+            android:layout_weight = "1"
+            android:background = "@drawable/cell_shape"
+            android:ellipsize = "end"
+            android:padding = "5sp"
+            android:singleLine = "true"
+            android:visibility="gone"
+            android:focusable="true"/>
+
+        <TextView
+            android:id = "@+id/column5"
+            android:layout_width = "0sp"
+            android:layout_height = "match_parent"
+            android:layout_weight = "1"
+            android:background = "@drawable/cell_shape"
+            android:ellipsize = "end"
+            android:padding = "5sp"
+            android:singleLine = "true"
+            android:visibility="gone"
+            android:focusable="true"/>
+
+        <TextView
+            android:id = "@+id/column6"
+            android:layout_width = "0sp"
+            android:layout_height = "match_parent"
+            android:layout_weight = "1"
+            android:background = "@drawable/cell_shape"
+            android:ellipsize = "end"
+            android:padding = "5sp"
+            android:singleLine = "true"
+            android:visibility="gone"
+            android:focusable="true"/>
+
+        <TextView
+            android:id = "@+id/column7"
+            android:layout_width = "0sp"
+            android:layout_height = "match_parent"
+            android:layout_weight = "1"
+            android:background = "@drawable/cell_shape"
+            android:ellipsize = "end"
+            android:padding = "5sp"
+            android:singleLine = "true"
+            android:visibility="gone"
+            android:focusable="true"/>
+    </LinearLayout>
+</LinearLayout>
