@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/edt_layout"
+        android:layout_width="match_parent"
+        android:layout_height="54sp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <EditText
+            android:id="@+id/main_keyword_edt"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="6sp"
+            android:layout_marginTop="6sp"
+            android:layout_marginBottom="6sp"
+            android:paddingLeft="8sp"
+            android:background="@android:color/white"
+            android:contentDescription="검색창"
+            android:hint="돋보의기 통합 검색"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/main_search_btn"
+            app:layout_constraintHorizontal_bias="0.519"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/main_search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="6sp"
+            android:layout_marginTop="6sp"
+            android:layout_marginBottom="6sp"
+            android:padding="5sp"
+            android:background="#FE4452"
+            android:contentDescription="@string/btn_search"
+            android:gravity="center_horizontal"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_search_red"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_layout"
+        tools:layout_editor_absoluteX="27sp"></android.support.v7.widget.RecyclerView>
+
+</android.support.constraint.ConstraintLayout>
+

@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ViewFlipper
+                    android:id="@+id/flipper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200sp"
+                    android:focusable="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent">
+
+                    <ImageView
+                        android:id="@+id/img_ad1"
+                        android:layout_width="match_parent"
+                        android:layout_height="200sp"
+                        android:contentDescription="월간 11절 타임딜"
+                        android:nextFocusRight="@id/img_ad2"
+                        android:onClick="blockBtnClick"
+                        android:src="@drawable/ad_1" />
+
+                    <ImageView
+                        android:id="@+id/img_ad2"
+                        android:layout_width="match_parent"
+                        android:layout_height="200sp"
+                        android:contentDescription="월간 11절 십일절샵"
+                        android:onClick="blockBtnClick"
+                        android:src="@drawable/ad_2" />
+
+                    <ImageView
+                        android:id="@+id/img_ad3"
+                        android:layout_width="match_parent"
+                        android:layout_height="200sp"
+                        android:contentDescription="월간 11절 버거킹"
+                        android:onClick="blockBtnClick"
+                        android:src="@drawable/ad_3" />
+
+                </ViewFlipper>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/flipper">
+
+                    <ViewFlipper
+                        android:id="@+id/flipper_keywords"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toStartOf="@id/list_lank"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <TextView
+                            android:id="@+id/txt_kwd1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="blockBtnClick"
+                            android:padding="15sp"
+                            android:text="검색어 1위"
+                            android:textSize="7pt" />
+
+                        <TextView
+                            android:id="@+id/txt_kwd2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="blockBtnClick"
+                            android:padding="15sp"
+                            android:text="검색어 2위"
+                            android:textSize="7pt" />
+
+                        <TextView
+                            android:id="@+id/txt_kwd3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="blockBtnClick"
+                            android:padding="15sp"
+                            android:text="검색어 3위"
+                            android:textSize="7pt" />
+
+                        <TextView
+                            android:id="@+id/txt_kwd4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="blockBtnClick"
+                            android:padding="15sp"
+                            android:text="검색어 4위"
+                            android:textSize="7pt" />
+
+                        <TextView
+                            android:id="@+id/txt_kwd5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="blockBtnClick"
+                            android:padding="15sp"
+                            android:text="검색어 5위"
+                            android:textSize="7pt" />
+
+                        <TextView
+                            android:id="@+id/txt_kwd6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="blockBtnClick"
+                            android:paddingLeft="15sp"
+                            android:text="검색어 6위"
+                            android:textSize="7pt" />
+
+                        <TextView
+                            android:id="@+id/txt_kwd7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="blockBtnClick"
+                            android:paddingLeft="15sp"
+                            android:text="검색어 7위"
+                            android:textSize="7pt" />
+
+                        <TextView
+                            android:id="@+id/txt_kwd8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="blockBtnClick"
+                            android:paddingLeft="15sp"
+                            android:text="검색어 8위"
+                            android:textSize="7pt" />
+
+                        <TextView
+                            android:id="@+id/txt_kwd9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="blockBtnClick"
+                            android:paddingLeft="15sp"
+                            android:text="검색어 9위"
+                            android:textSize="7pt" />
+
+                        <TextView
+                            android:id="@+id/txt_kwd10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="blockBtnClick"
+                            android:paddingLeft="15sp"
+                            android:text="검색어 10위"
+                            android:textSize="7pt" />
+
+                    </ViewFlipper>
+
+                    <ExpandableListView
+                        android:id="@+id/list_lank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="10sp"
+                        android:groupIndicator="@android:color/transparent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@id/flipper_keywords"></ExpandableListView>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btn_grid1"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="쿠폰"
+                android:onClick="blockBtnClick"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toStartOf="@+id/btn_grid2"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                app:srcCompat="@drawable/btn_grid1" />
+
+            <ImageButton
+                android:id="@+id/btn_grid2"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="출석체크"
+                android:onClick="blockBtnClick"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toStartOf="@+id/btn_grid3"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/btn_grid1"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                app:srcCompat="@drawable/btn_grid2" />
+
+            <ImageButton
+                android:id="@+id/btn_grid3"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="e쿠폰"
+                android:onClick="blockBtnClick"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toStartOf="@+id/btn_grid4"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/btn_grid2"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                app:srcCompat="@drawable/btn_grid3" />
+
+            <ImageButton
+                android:id="@+id/btn_grid4"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="여행 항공"
+                android:onClick="blockBtnClick"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toStartOf="@+id/btn_grid5"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/btn_grid3"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                app:srcCompat="@drawable/btn_grid4" />
+
+            <ImageButton
+                android:id="@+id/btn_grid5"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="휴대폰샵"
+                android:onClick="blockBtnClick"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/btn_grid4"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                app:srcCompat="@drawable/btn_grid5" />
+
+            <ImageButton
+                android:id="@+id/btn_grid6"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="당일배송"
+                android:onClick="blockBtnClick"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toStartOf="@+id/btn_grid7"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_grid1"
+                app:srcCompat="@drawable/btn_grid6" />
+
+            <ImageButton
+                android:id="@+id/btn_grid7"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="롯데"
+                android:onClick="blockBtnClick"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toStartOf="@+id/btn_grid8"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/btn_grid6"
+                app:layout_constraintTop_toBottomOf="@+id/btn_grid2"
+                app:srcCompat="@drawable/btn_grid7" />
+
+            <ImageButton
+                android:id="@+id/btn_grid8"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="현대"
+                android:onClick="blockBtnClick"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toStartOf="@+id/btn_grid9"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/btn_grid7"
+                app:layout_constraintTop_toBottomOf="@+id/btn_grid3"
+                app:srcCompat="@drawable/btn_grid8" />
+
+            <ImageButton
+                android:id="@+id/btn_grid9"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="GS SHOP"
+                android:onClick="blockBtnClick"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toStartOf="@+id/btn_grid10"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/btn_grid8"
+                app:layout_constraintTop_toBottomOf="@+id/btn_grid4"
+                app:srcCompat="@drawable/btn_grid9" />
+
+            <ImageButton
+                android:id="@+id/btn_grid10"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="전체보기"
+                android:onClick="blockBtnClick"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/btn_grid9"
+                app:layout_constraintTop_toBottomOf="@+id/btn_grid5"
+                app:srcCompat="@drawable/btn_grid10" />
+
+            <ImageButton
+                android:id="@+id/btn_banner"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="월간십일절"
+                android:onClick="blockBtnClick"
+                android:scaleType="fitXY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_grid8"
+                app:srcCompat="@drawable/ad_bottom" />
+
+            <LinearLayout
+                android:id="@+id/layout_main_ads"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_banner">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:focusable="true">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/cv_img1"
+                            android:layout_width="130sp"
+                            android:layout_height="130sp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_main_00"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Button
+                            android:id="@+id/cv_btn1"
+                            android:layout_width="30sp"
+                            android:layout_height="15sp"
+                            android:background="#CC000000"
+                            android:contentDescription="광고상품"
+                            android:padding="0sp"
+                            android:text="광고"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="@+id/cv_img1"
+                            app:layout_constraintTop_toTopOf="@+id/cv_img1" />
+
+                        <ImageButton
+                            android:id="@+id/cv_heart1"
+                            android:layout_width="40sp"
+                            android:layout_height="40sp"
+                            android:background="@android:color/white"
+                            android:contentDescription="상품을 좋아요합니다"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_like"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                        <TextView
+                            android:id="@+id/cv_ads1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6sp"
+                            android:text="광고"
+                            app:layout_constraintStart_toEndOf="@+id/cv_img1"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/cv_prodNm1"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="6sp"
+                            android:accessibilityHeading="true"
+                            android:text="샤오미 공식대리점 공기청정기 미에어2"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/cv_img1"
+                            app:layout_constraintTop_toBottomOf="@+id/cv_ads1" />
+
+                        <TextView
+                            android:id="@+id/cv_brand1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6sp"
+                            android:text="샤오미"
+                            android:textSize="11sp"
+                            app:layout_constraintStart_toEndOf="@+id/cv_img1"
+                            app:layout_constraintTop_toBottomOf="@+id/cv_prodNm1" />
+
+                        <TextView
+                            android:id="@+id/cv_price1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/cv_prodNm1"
+                            android:layout_below="@id/cv_prodNm1"
+                            android:layout_marginTop="2sp"
+                            android:gravity="center_vertical|left"
+                            android:text="149,000원"
+                            android:textColor="#000000"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@+id/cv_prodNm1"
+                            app:layout_constraintTop_toBottomOf="@+id/cv_brand1" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/cv_3"
+                    app:layout_constraintTop_toBottomOf="@id/cv_1">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:focusable="true">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/cv_img2"
+                            android:layout_width="130sp"
+                            android:layout_height="130sp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_main_10"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Button
+                            android:id="@+id/cv_btn2"
+                            android:layout_width="30sp"
+                            android:layout_height="15sp"
+                            android:background="#CC000000"
+                            android:contentDescription="광고상품"
+                            android:padding="0sp"
+                            android:text="광고"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="@+id/cv_img2"
+                            app:layout_constraintTop_toTopOf="@+id/cv_img2" />
+
+                        <ImageButton
+                            android:id="@+id/cv_heart2"
+                            android:layout_width="40sp"
+                            android:layout_height="40sp"
+                            android:background="@android:color/white"
+                            android:contentDescription="상품을 좋아요합니다"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_like"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                        <TextView
+                            android:id="@+id/cv_ads2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6sp"
+                            android:text="광고"
+                            app:layout_constraintStart_toEndOf="@+id/cv_img2"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/cv_prodNm2"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="6sp"
+                            android:accessibilityHeading="true"
+                            android:text="[청정원] 로제스파게티소스 600g"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/cv_img2"
+                            app:layout_constraintTop_toBottomOf="@+id/cv_ads2" />
+
+                        <TextView
+                            android:id="@+id/cv_brand2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6sp"
+                            android:text="청정원"
+                            android:textSize="11sp"
+                            app:layout_constraintStart_toEndOf="@+id/cv_img2"
+                            app:layout_constraintTop_toBottomOf="@+id/cv_prodNm2" />
+
+                        <TextView
+                            android:id="@+id/cv_price2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/cv_prodNm2"
+                            android:layout_below="@id/cv_prodNm2"
+                            android:layout_marginTop="2sp"
+                            android:gravity="center_vertical|left"
+                            android:text="3,780원"
+                            android:textColor="#000000"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@+id/cv_prodNm2"
+                            app:layout_constraintTop_toBottomOf="@+id/cv_brand2" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@id/cv_4"
+                    app:layout_constraintTop_toBottomOf="@id/cv_2">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:focusable="true"
+                        android:id="@+id/LastItem"
+                        >
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/cv_img3"
+                            android:layout_width="130sp"
+                            android:layout_height="130sp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_main_20"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Button
+                            android:id="@+id/cv_btn3"
+                            android:layout_width="30sp"
+                            android:layout_height="15sp"
+                            android:background="#CC000000"
+                            android:contentDescription="광고상품"
+                            android:padding="0sp"
+                            android:text="광고"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="@+id/cv_img3"
+                            app:layout_constraintTop_toTopOf="@+id/cv_img3" />
+
+                        <ImageButton
+                            android:id="@+id/cv_heart3"
+                            android:layout_width="40sp"
+                            android:layout_height="40sp"
+                            android:background="@android:color/white"
+                            android:contentDescription="상품을 좋아요합니다"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_like"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                        <TextView
+                            android:id="@+id/cv_ads3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6sp"
+                            android:text="광고"
+                            app:layout_constraintStart_toEndOf="@+id/cv_img3"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/cv_prodNm3"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="6sp"
+                            android:accessibilityHeading="true"
+                            android:text="★갭키즈 19년 SPRING★ [키즈 남아 6-14세] 후드 윈드브레이커 점퍼"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/cv_img3"
+                            app:layout_constraintTop_toBottomOf="@+id/cv_ads3" />
+
+                        <TextView
+                            android:id="@+id/cv_brand3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6sp"
+                            android:text="GAP kids"
+                            android:textSize="11sp"
+                            app:layout_constraintStart_toEndOf="@+id/cv_img3"
+                            app:layout_constraintTop_toBottomOf="@+id/cv_prodNm3" />
+
+                        <TextView
+                            android:id="@+id/cv_price3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/cv_prodNm3"
+                            android:layout_below="@id/cv_prodNm3"
+                            android:layout_marginTop="2sp"
+                            android:gravity="center_vertical|left"
+                            android:text="35,939원"
+                            android:textColor="#000000"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@+id/cv_prodNm3"
+                            app:layout_constraintTop_toBottomOf="@+id/cv_brand3" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cv_3">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:focusable="true">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/cv_img3"
+                            android:layout_width="130sp"
+                            android:layout_height="130sp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_main_20"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Button
+                            android:id="@+id/cv_btn3"
+                            android:layout_width="30sp"
+                            android:layout_height="15sp"
+                            android:background="#CC000000"
+                            android:contentDescription="레이블없음"
+                            android:padding="0sp"
+                            android:text="광고"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="@+id/cv_img3"
+                            app:layout_constraintTop_toTopOf="@+id/cv_img3" />
+
+                        <ImageButton
+                            android:id="@+id/cv_heart3"
+                            android:layout_width="40sp"
+                            android:layout_height="40sp"
+                            android:background="@android:color/white"
+                            android:contentDescription="상품을 좋아요합니다"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_like"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                        <TextView
+                            android:id="@+id/cv_ads3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6sp"
+                            android:text="광고"
+                            app:layout_constraintStart_toEndOf="@+id/cv_img3"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/cv_prodNm3"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="6sp"
+                            android:accessibilityHeading="true"
+                            android:text="★갭키즈 19년 SPRING★ [키즈 남아 6-14세] 후드 윈드브레이커 점퍼"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/cv_img3"
+                            app:layout_constraintTop_toBottomOf="@+id/cv_ads3" />
+
+                        <TextView
+                            android:id="@+id/cv_brand3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6sp"
+                            android:text="GAP kids"
+                            android:textSize="11sp"
+                            app:layout_constraintStart_toEndOf="@+id/cv_img3"
+                            app:layout_constraintTop_toBottomOf="@+id/cv_prodNm3" />
+
+                        <TextView
+                            android:id="@+id/cv_price3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/cv_prodNm3"
+                            android:layout_below="@id/cv_prodNm3"
+                            android:layout_marginTop="2sp"
+                            android:gravity="center_vertical|left"
+                            android:text="35,939원"
+                            android:textColor="#000000"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@+id/cv_prodNm3"
+                            app:layout_constraintTop_toBottomOf="@+id/cv_brand3" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
